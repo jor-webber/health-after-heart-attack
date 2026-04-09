@@ -10,29 +10,29 @@ namespace HealthAfterHeartAttack.Persistence
         {
         }
 
-        public new async Task<List<CareTeamContact>> GetAllAsync()
+        public async Task<List<CareTeamContact>> GetAllAsync()
         {
             return await _context.CareTeamContacts.ToListAsync();
         }
 
-        public new async Task<CareTeamContact?> GetByIdAsync(int id)
+        public async Task<CareTeamContact?> GetByIdAsync(int id)
         {
             return await _context.CareTeamContacts.FindAsync(id);
         }
 
-        public new async Task AddAsync(CareTeamContact careTeamContact)
+        public async Task AddAsync(CareTeamContact careTeamContact)
         {
             _context.CareTeamContacts.Add(careTeamContact);
             await _context.SaveChangesAsync();
         }
 
-        public new async Task UpdateAsync(CareTeamContact careTeamContact)
+        public async Task UpdateAsync(CareTeamContact careTeamContact)
         {
             _context.Entry(careTeamContact).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
-        public new async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
             var careTeamContact = await _context.CareTeamContacts.FindAsync(id);
             if (careTeamContact != null)
