@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.2.2",
+    "vue-router": "^5.0.4",
+    "vuetify": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/vue-router": "^2.0.0"
+  }
+}

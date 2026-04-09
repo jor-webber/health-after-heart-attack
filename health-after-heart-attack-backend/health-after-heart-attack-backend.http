@@ -1,0 +1,6 @@
+@health_after_heart_attack_backend_HostAddress = http://localhost:5144
+
+GET {{health_after_heart_attack_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
